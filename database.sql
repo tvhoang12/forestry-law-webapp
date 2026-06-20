@@ -19,6 +19,9 @@ BEGIN
         [password] NVARCHAR(255) NOT NULL,
         [email] NVARCHAR(255) NOT NULL,
         [role] NVARCHAR(50) NOT NULL DEFAULT 'client', -- 'admin', 'lawyer', 'staff', 'client'
+        [firstName] NVARCHAR(100) NULL,
+        [lastName] NVARCHAR(100) NULL,
+        [phoneNumber] NVARCHAR(50) NULL,
         [createdAt] DATETIME NOT NULL DEFAULT GETDATE(),
         [updatedAt] DATETIME NOT NULL DEFAULT GETDATE()
     );

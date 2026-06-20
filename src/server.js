@@ -5,7 +5,7 @@ const swaggerSpecs = require('./docs/swagger');
 
 // Import routes
 const authRoutes = require('./routes/auth');
-const userRoutes = require('./routes/users');
+const userRoutes = require('./routes/user');
 const newsRoutes = require('./routes/news');
 const documentRoutes = require('./routes/documents');
 const appointmentRoutes = require('./routes/appointments');
@@ -24,7 +24,8 @@ app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpecs));
 
 // Route prefixes
 app.use('/api/auth', authRoutes);
-app.use('/api/users', userRoutes);
+app.use('/api/user', userRoutes);
+app.use('/api/users', userRoutes); // backwards compatibility
 app.use('/api/news', newsRoutes);
 app.use('/api/documents', documentRoutes);
 app.use('/api/appointments', appointmentRoutes);
